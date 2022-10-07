@@ -1,14 +1,15 @@
 <template>
   <v-container>
-    <h1>Home</h1>
+    <h1>Email: {{ this.user.email}}</h1>
   </v-container>
 </template>
-
 <script>
+import { mapState } from "vuex";
+
 export default {
   name: 'HomeComponent',
-  props: {
-    msg: String
+  computed: {
+    ...mapState(["user"]),
   }
-}
+};
 </script>
