@@ -1,8 +1,7 @@
-import firebase from "firebase/compat/app";
-import 'firebase/compat/functions';   
-import 'firebase/compat/firestore';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/auth';
 
-
+// firebase init goes here
 const config = {
     apiKey: process.env.VUE_APP_API_KEY,
     authDomain: process.env.VUE_APP_AUTH_DOMAIN,
@@ -14,13 +13,17 @@ const config = {
     measurementId: process.env.VUE_APP_MESUREMENT_ID
 }
 
-firebase.initializeApp(config);
+firebase.initializeApp(config, {
+  experimentalForceLongPolling: true,
+  useFetchStreams: false,
+  ignoreUndefinedProperties: true,
+});
 
 // firebase utils
-const db = firebase.firestore()
+const auth = firebase.auth
 
 export {
-    db,
+    auth,
     firebase
 }
 
