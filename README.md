@@ -39,7 +39,7 @@ You may use any languages, frameworks and technologies you like. Please provide:
 
 ## Demo
 
-For live demo go to this link https://bambank-68e88.web.app
+For live demo go to this link https://bambank-68e88.web.app/auth
 
 ## Screenshots
 
